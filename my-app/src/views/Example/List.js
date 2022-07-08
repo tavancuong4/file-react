@@ -1,8 +1,8 @@
 import React from "react";
 
-class Child extends React.Component {
+class List extends React.Component {
   state = {
-    showJobs: false,
+    showJobs: true,
   };
 
   handleShow = () => {
@@ -20,7 +20,12 @@ class Child extends React.Component {
       <div>
         {showJobs === false ? (
           <div>
-            <button onClick={() => this.handleShow()}>Show</button>
+            <button
+              onClick={() => this.handleShow()}
+              style={{ padding: "5px", marginTop: "10px" }}
+            >
+              Show
+            </button>
           </div>
         ) : (
           <div>
@@ -28,14 +33,19 @@ class Child extends React.Component {
               {array.map((item, index) => {
                 return (
                   <div key={item.id}>
-                    {item.title} - {item.salary} <></> <></>{" "}
+                    {item.name} - {item.age} <></> <></>{" "}
                     <span onClick={() => this.handleDelete(item)}>X</span>
                   </div>
                 );
               })}
             </div>
             <div>
-              <button onClick={() => this.handleShow()}>Hide</button>
+              <button
+                onClick={() => this.handleShow()}
+                style={{ padding: "5px", marginTop: "10px" }}
+              >
+                Hide
+              </button>
             </div>
           </div>
         )}
@@ -44,4 +54,4 @@ class Child extends React.Component {
   }
 }
 
-export default Child;
+export default List;

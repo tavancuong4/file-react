@@ -1,59 +1,62 @@
 import React from "react";
 
-class AddComponent extends React.Component {
+class AddInformation extends React.Component {
   state = {
-    title: "",
-    salary: "",
+    name: "",
+    age: "",
   };
   handleTitle = (event) => {
     this.setState({
-      title: event.target.value,
+      name: event.target.value,
     });
   };
   handleSalary = (event) => {
     this.setState({
-      salary: event.target.value,
+      age: event.target.value,
     });
   };
   handleClick = (event) => {
     event.preventDefault();
     console.log("check data: ", this.state);
-    if (!this.state.title || !this.state.salary) {
+    if (!this.state.name || !this.state.age) {
       alert("vui long nhap gia tri ");
       return;
     }
     this.props.addNewJob({
       id: Math.floor(Math.random() * 1001),
-      title: this.state.title,
-      salary: this.state.salary,
+      name: this.state.name,
+      age: this.state.age,
     });
     this.setState({
-      title: "",
-      salary: "",
+      name: "",
+      age: "",
     });
   };
   render() {
     return (
       <div>
         <form>
-          <label htmlFor="fname">title :</label>
+          <label htmlFor="fname">Name :</label>
           <br />
           <input
             type="text"
-            value={this.state.title}
+            value={this.state.name}
             onChange={(event) => this.handleTitle(event)}
+            style={{ width: "300px", padding: "5px", fontSize: "17px" }}
           />
           <br />
-          <label htmlFor="lname">Salary :</label>
+          <label htmlFor="lname">Age :</label>
           <br />
           <input
             type="text"
-            value={this.state.salary}
+            value={this.state.age}
             onChange={(event) => this.handleSalary(event)}
+            style={{ width: "300px", padding: "5px", fontSize: "17px" }}
           />
           <br />
           <br />
           <input
+            style={{ padding: "5px" }}
             type="submit"
             value="submit"
             onClick={(event) => this.handleClick(event)}
@@ -63,4 +66,4 @@ class AddComponent extends React.Component {
     );
   }
 }
-export default AddComponent;
+export default AddInformation;

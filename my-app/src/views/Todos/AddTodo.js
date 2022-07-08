@@ -2,35 +2,35 @@ import React from "react";
 
 class AddTodo extends React.Component {
   state = {
-    title: "",
+    work: "",
   };
   handleOnchangeTitle = (event) => {
     this.setState({
-      title: event.target.value,
+      work: event.target.value,
     });
   };
   handleAddTodo = () => {
-    if (!this.state.title) {
-      alert("missing title..");
+    if (!this.state.work) {
+      alert("missing work..");
       return;
     }
     let todo = {
       id: Math.floor(Math.random() * 1001),
-      title: this.state.title,
+      work: this.state.work,
     };
     this.props.addNewTodo(todo);
     this.setState({
-      title: "",
+      work: "",
     });
   };
   render() {
-    let { title } = this.state;
+    let { work } = this.state;
     return (
       <div>
         <div className="add-todo">
           <input
             type="text"
-            value={title}
+            value={work}
             onChange={(event) => this.handleOnchangeTitle(event)}
           />
           <button type="button" onClick={() => this.handleAddTodo()}>

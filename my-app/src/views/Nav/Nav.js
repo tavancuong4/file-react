@@ -11,8 +11,10 @@ class Nav extends React.Component {
             Home
           </NavLink>
           <NavLink to="/todo">Todo</NavLink>
-          <NavLink to="/Example">Example</NavLink>
+          <NavLink to="/about">Information</NavLink>
           <NavLink to="/user">Users</NavLink>
+          <NavLink to="/form">Form</NavLink>
+          <NavLink to="/event">Event</NavLink>
         </div>
       </div>
     );

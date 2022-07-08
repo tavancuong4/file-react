@@ -18,8 +18,10 @@
       padding: 10px;
       border-bottom: 2px solid rgb(156, 151, 151);
 
-      .edit {
-        margin: 0 10px 0 20px;
+      .edit,
+      .delete {
+        margin: 0 4px 0 20px;
+        padding: 5px;
       }
     }
   }

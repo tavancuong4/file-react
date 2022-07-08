@@ -6,9 +6,9 @@ import Color from "../HOC/Color";
 class ListTodo extends React.Component {
   state = {
     listTodo: [
-      { id: "todo1", title: "Doing homework" },
-      { id: "todo2", title: "Making video" },
-      { id: "todo3", title: "Fixing Bugs" },
+      { id: "todo1", work: "Bán đồ ăn" },
+      { id: "todo2", work: "Làm công ty" },
+      { id: "todo3", work: "Bán bất động sản" },
     ],
     editTodo: {},
   };
@@ -32,7 +32,7 @@ class ListTodo extends React.Component {
       let listTodoCopy = [...listTodo];
       let objIndex = listTodoCopy.findIndex((item) => item.id === todo.id);
 
-      listTodoCopy[objIndex].title = editTodo.title;
+      listTodoCopy[objIndex].work = editTodo.work;
       this.setState({
         listTodo: listTodoCopy,
         editTodo: {},
@@ -46,7 +46,7 @@ class ListTodo extends React.Component {
   };
   handleOnchangeEditTodo = (event) => {
     let todoCopy = { ...this.state.editTodo };
-    todoCopy.title = event.target.value;
+    todoCopy.work = event.target.value;
     this.setState({
       editTodo: todoCopy,
     });
@@ -56,7 +56,7 @@ class ListTodo extends React.Component {
     let isEmptyObj = Object.keys(editTodo).length === 0;
     return (
       <>
-        <p>Simple Todo Apps with React.js (chi co && Eric)</p>
+        <p>Simple Todo Apps with React.js (chi co && Cuong)</p>
         <div className="list-todo-container">
           <AddTodo addNewTodo={this.addNewTodo}></AddTodo>
 
@@ -68,7 +68,7 @@ class ListTodo extends React.Component {
                   <div className="todo-child" key={item.id}>
                     {isEmptyObj === true ? (
                       <span>
-                        {index + 1} - {item.title}
+                        {index + 1} - {item.work}
                       </span>
                     ) : (
                       <>
@@ -76,7 +76,7 @@ class ListTodo extends React.Component {
                           <span>
                             {index + 1} -{" "}
                             <input
-                              value={editTodo.title}
+                              value={editTodo.work}
                               type="text"
                               onChange={(event) =>
                                 this.handleOnchangeEditTodo(event)
@@ -85,7 +85,7 @@ class ListTodo extends React.Component {
                           </span>
                         ) : (
                           <span>
-                            {index + 1} - {item.title}
+                            {index + 1} - {item.work}
                           </span>
                         )}
                       </>

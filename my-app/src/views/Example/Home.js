@@ -38,7 +38,7 @@ class Home extends React.Component {
                 <div key={item.id}>
                   {index + 1} - {item.name}{" "}
                   <button
-                    style={{ marginLeft: "20px" }}
+                    style={{ marginLeft: "20px", padding: "0 5px" }}
                     onClick={() => this.handleDeleteUser(item)}
                   >
                     x
@@ -47,7 +47,12 @@ class Home extends React.Component {
               );
             })}
         </div>
-        <button onClick={() => this.handleCreateUser()}>Add new</button>
+        <button
+          onClick={() => this.handleCreateUser()}
+          style={{ padding: "5px" }}
+        >
+          Add new
+        </button>
       </div>
     );
   }
