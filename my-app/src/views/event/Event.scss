@@ -2,17 +2,20 @@
   width: 100%;
   height: 100vh;
   background: #282c34;
+  margin-top: 60px;
 }
 
 .container2 {
   width: 760px;
-  height: 500px;
+  height: 450px;
   background: white;
   margin: 0 auto;
+  display: block;
 }
 
-.container2 h3 {
-  margin-left: 20px;
+.tong h3 {
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
 .container2 ul {

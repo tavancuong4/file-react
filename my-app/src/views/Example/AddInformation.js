@@ -35,7 +35,7 @@ class AddInformation extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form style={{ marginTop: "80px" }}>
           <label htmlFor="fname">Name :</label>
           <br />
           <input

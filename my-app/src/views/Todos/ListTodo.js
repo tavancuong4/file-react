@@ -56,7 +56,9 @@ class ListTodo extends React.Component {
     let isEmptyObj = Object.keys(editTodo).length === 0;
     return (
       <>
-        <p>Simple Todo Apps with React.js (chi co && Cuong)</p>
+        <p style={{ marginTop: "60px" }}>
+          Thêm sửa xóa các chuỗi cùng Reactjs & cuong
+        </p>
         <div className="list-todo-container">
           <AddTodo addNewTodo={this.addNewTodo}></AddTodo>
 

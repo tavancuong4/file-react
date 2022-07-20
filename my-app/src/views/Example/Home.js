@@ -22,7 +22,9 @@ class Home extends React.Component {
     let listUsers = this.props.dataRedux;
     return (
       <div>
-        <div>Hello work from Homepape with CUONG</div>
+        <div style={{ marginTop: "60px" }}>
+          Lấy dữ liệu và làm việc bằng redux
+        </div>
         <div>
           <img
             src={logo}

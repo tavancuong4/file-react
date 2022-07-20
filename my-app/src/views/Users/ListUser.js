@@ -22,13 +22,16 @@ class ListUser extends React.Component {
     let { listUsers } = this.state;
     return (
       <div className="list-user-container">
-        <div className="title">Fetch all list users</div>
+        <div className="title" style={{ marginTop: "50px" }}>
+          List người dùng lấy bằng api
+        </div>
         <div className="list-user-content">
           {listUsers &&
             listUsers.length > 0 &&
             listUsers.map((item, index) => {
               return (
                 <div
+                  style={{ padding: "10px" }}
                   className="child"
                   key={item.id}
                   onClick={() => this.handleViewDetail(item)}

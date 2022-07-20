@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+  display: block;
+  width: 300px;
+  padding: 30px;
+}
+.cards:hover {
+  box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.image img {
+  width: 200px;
+  height: 150px;
+}
+.details p:nth-child(1) {
+  font-weight: bold;
+}
+.details p:nth-child(2) {
+  font-size: 20px;
+  color: wheat;
+}
+p:n .details p:nth-child(3) {
+  font-weight: bold;
+  color: wheat;
+}
+.details button {
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(127, 127, 240);
+  outline: none;
+}

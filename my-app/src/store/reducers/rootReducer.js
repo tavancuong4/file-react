@@ -1,8 +1,8 @@
 const initState = {
   users: [
-    { id: 1, name: "Dung yeu dung" },
-    { id: 2, name: "Son yeu huyen" },
-    { id: 3, name: "Hung yeu hao" },
+    { id: 1, name: "Cao văn Hùng" },
+    { id: 2, name: "Tạ Xuân Cương" },
+    { id: 3, name: "Đặng Thanh Sơn" },
   ],
   post: [],
 };

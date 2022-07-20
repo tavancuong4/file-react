@@ -24,8 +24,8 @@ class Event extends React.Component {
   render() {
     return (
       <div className="tong">
+        <h3>Click để xem danh sách mới nhất</h3>
         <div className="container2">
-          <h3>Danh sách các sản phẩm</h3>
           <ul className="tab">
             <li className="tap_item" id="1" onClick={() => this.handleTrend()}>
               Phổ biến

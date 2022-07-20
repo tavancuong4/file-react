@@ -10,6 +10,7 @@ import ListUser from "./Users/ListUser";
 import DetailUser from "./Users/DetailUser";
 import Form from "./Form/Form";
 import Event from "./event/Event";
+import Cart from "./cart/Cart";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <Nav></Nav>
-          <img src={logo} className="App-logo" alt="logo" />
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <Switch>
             <Route path="/" exact>
               <Home></Home>
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route path="/user/:id">
               <DetailUser></DetailUser>
+            </Route>
+            <Route path="/cart">
+              <Cart></Cart>
             </Route>
             <Route path="/form">
               <Form></Form>
